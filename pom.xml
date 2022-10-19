@@ -40,6 +40,22 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+	         <plugin>
+ 	<groupId>com.spotify</groupId>
+ 	<artifactId>docker-maven-plugin</artifactId>
+ 	<version>1.2.0</version>
+ 	<configuration>
+ 		<imageName>info/m2sj/${project.artifactId}</imageName>
+ 		<dockerDirectory>src/main/docker</dockerDirectory>
+ 		<resources>
+ 			<resource>
+ 				<targetPath>/</targetPath>
+ 				<directory>${project.build.directory}</directory>
+ 				<include>${project.build.finalName}.jar</include>
+ 				</resource>
+ 		</resources>
+ 	</configuration>
+ </plugin>
 	</build>
 
 </project>
