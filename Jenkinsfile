@@ -15,6 +15,17 @@ node {
         sh "echo 'Build Spring Boot Jar'"
         sh "'${mvnHome}/bin/mvn' clean package"
     }
+  stage ('SonarQube analysis'){
+	withSonarQubeEnv('SonarQube'){
+		sh "pwd"
+		sh './gradlew --info sonarqube' +
+		' -Dsonar.projectKey=Koo' + 
+		' -Dsonar.host.url=http://54.238.193.86:5000' +
+		' -Dsonar.login=squ_892cd416be91411e1e25b99cf8d1f37ff33af727'
+
+}
+
+}
   stage('========== Build image ==========') { 
     app = docker.build("tanzu/${env.IMAGE_NAME}") 
 } 
