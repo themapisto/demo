@@ -17,10 +17,13 @@ node {
     }
   stage ('SonarQube analysis'){
 	withSonarQubeEnv('Sonarqube'){
-		sh './gradlew --info sonarqube' +
-		' -Dsonar.projectKey=Koo' + 
-		' -Dsonar.host.url=http://54.238.193.86:5000' +
-		' -Dsonar.login=squ_892cd416be91411e1e25b99cf8d1f37ff33af727'
+		sh """
+"""
+sonar-scanner \
+  -Dsonar.projectKey=Koo \
+  -Dsonar.host.url=http://54.238.193.86:5000 \
+  -Dsonar.login=squ_892cd416be91411e1e25b99cf8d1f37ff33af727 \
+"""
 
 }
 
