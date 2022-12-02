@@ -18,7 +18,6 @@ node {
   stage ('SonarQube analysis'){
 	withSonarQubeEnv('Sonarqube'){
 		sh """
-"""
 sonar-scanner \
   -Dsonar.projectKey=Koo \
   -Dsonar.host.url=http://54.238.193.86:5000 \
