@@ -16,8 +16,7 @@ node {
         sh "'${mvnHome}/bin/mvn' clean package"
     }
   stage ('SonarQube analysis'){
-	  def scannerHome = tool 'SonarScanner 3.4.0.2513';
-	withSonarQubeEnv('SonarQube'){
+	withSonarQubeEnv('Sonarqube'){
 		sh './gradlew --info sonarqube' +
 		' -Dsonar.projectKey=Koo' + 
 		' -Dsonar.host.url=http://54.238.193.86:5000' +
