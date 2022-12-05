@@ -36,7 +36,7 @@ stage('==========argocd deploy image========'){
         git config --global user.email "themapisto@naver.com"
         git config --global user.name "themapisto"
 	git add . && git commit -m '[Argo] Docker image tag: ${env.BUILD_NUMBER}' && \
-        git push
+        git push origin main
     """
 
 
