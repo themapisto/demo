@@ -39,6 +39,7 @@ stage('==========argocd deploy image========'){
 	cat /var/lib/jenkins/workspace/springboot/k8s/client_deploy.yaml && \
         git config --global user.name "themapisto"
 	git config --global user.email "themapisto@naver.com"
+	git remote -v
 	git config remote.origin.url 'https://$SCM_USER:$SCM_PASSWORD@github.com/$SCM_USER/demo.git'
 	git config --global credential.helper store
 	sed -i 's/1.123/${env.BUILD_NUMBER}/g' /var/lib/jenkins/workspace/springboot/k8s/client_deploy.yaml && \
