@@ -29,7 +29,7 @@ node {
 
 stage('==========argocd deploy image========'){
     
-    git branch: 'main', credentialId: 'github', url: 'https://github.com/themapisto/demo.git'
+    git branch: 'main', credentialsId: 'github', url: 'https://github.com/themapisto/demo.git'
 
     sh """
 	cat /var/lib/jenkins/workspace/springboot/k8s/client_deploy.yaml && \
