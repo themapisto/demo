@@ -30,8 +30,8 @@ node {
 stage('==========argocd deploy image========'){
     sh """
 	cat /var/lib/jenkins/workspace/springboot/k8s/client_deploy.yaml && \
-        sed -i 's/springboot:*/springboot:${env.BUILD_NUMBER}/g' /var/lib/jenkins/workspace/springboot/k8s/client_deploy.yaml && \
-        git commit -m '[Argo] Docker image tag: ${env.BUILD_NUMBER}' && \
+        sed -i 's/1.123/${env.BUILD_NUMBER}/g' /var/lib/jenkins/workspace/springboot/k8s/client_deploy.yaml && \
+        git add && git commit -m '[Argo] Docker image tag: ${env.BUILD_NUMBER}' && \
         git push
     """
 
