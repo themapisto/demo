@@ -40,7 +40,7 @@ stage('==========argocd deploy image========'){
         git config --global user.name "themapisto"
 	git config --global user.email "themapisto@naver.com"
 	git remote -v
-	git config remote.origin.url 'https://themapisto:soh46076755!@github.com/themapisto/demo.git'
+	git config remote.origin.url 'https://themapisto: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@github.com/themapisto/demo.git'
 	git config --global credential.helper store
 	sed -i 's/1.123/${env.BUILD_NUMBER}/g' /var/lib/jenkins/workspace/springboot/k8s/client_deploy.yaml && \
 	git add . && git commit -m '[Argo] Docker image tag: ${env.BUILD_NUMBER}' && \
