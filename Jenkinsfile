@@ -42,7 +42,7 @@ stage('==========argocd deploy image========'){
         git config --global user.name "themapisto"
 	git config --global credential.helper store
 	git add . && git commit -m '[Argo] Docker image tag: ${env.BUILD_NUMBER}' && \
-        git push -u origin main
+        git push
     """
 
 }
