@@ -29,12 +29,13 @@ node {
 
 stage('==========argocd deploy image========'){
     
-    git branch: 'main', credentialsId: 'github', url: 'https://github.com/themapisto/demo.git'
 
     sh """
 	cat /var/lib/jenkins/workspace/springboot/k8s/client_deploy.yaml && \
         sed -i 's/1.123/${env.BUILD_NUMBER}/g' /var/lib/jenkins/workspace/springboot/k8s/client_deploy.yaml && \
-        git add . && git commit -m '[Argo] Docker image tag: ${env.BUILD_NUMBER}' && \
+        git config --global user.email "themapisto@naver.com"
+        git config --global user.name "themapisto"
+	git add . && git commit -m '[Argo] Docker image tag: ${env.BUILD_NUMBER}' && \
         git push
     """
 
