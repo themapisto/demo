@@ -29,9 +29,7 @@ node {
 
 stage('==========argocd deploy image========'){
     sh """
-        ...
         sed -i 's/tag:.*/tag: ${env.BUILD_NUMBER}/g' k8s/client_deploy.yaml && \
-        ...
         git commit -m '[Argo] Docker image tag: ${env.BUILD_NUMBER}' && \
         git push
     """
