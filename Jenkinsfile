@@ -32,7 +32,7 @@ node {
 
 stage('==========argocd deploy image========'){
 
-  withCredentials([usernamePassword(credentialsId: "$scmCredential",
+  withCredentials([usernamePassword(credentialsId: "github",
                                                   usernameVariable: 'SCM_USER',
                                                   passwordVariable: 'SCM_PASSWORD')]) {
     sh """
