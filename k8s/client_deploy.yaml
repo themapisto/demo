@@ -1,11 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springboot
+  name: client
+  namespace: springboot
   labels:
     app: springboot
 spec:
-  replicas: 5
+  replicas: 1
   selector:
     matchLabels:
       app: springboot
@@ -16,6 +17,7 @@ spec:
     spec:
       containers:
       - name: springboot
-        image: harbor.aikoo.net/tanzu/springboot:1.123123
+        image: harbor.aikoo.net/tanzu/springboot:1.1056
         ports:
-        - containerPort: 8080
+        - containerPort: 8012
+

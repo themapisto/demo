@@ -5,11 +5,12 @@ metadata:
   labels:
     app: springboot
   name: springboot
+  namespace: springboot
 spec:
   ports:
-  - port: 8080
+  - port: 8012
     protocol: TCP
-    targetPort: 8080
+    targetPort: 8012
   selector:
     app: springboot
   type: ClusterIP

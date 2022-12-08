@@ -1,0 +1,12 @@
+apiVersion: projectcontour.io/v1
+kind: HTTPProxy
+metadata:
+  name: springboot
+  namespace: springboot
+spec:
+  virtualhost:
+    fqdn: client.taskoo.net
+  routes:
+    - services:
+      - name: springboot
+        port: 8012
