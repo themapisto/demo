@@ -2,6 +2,7 @@
 # Spring Eureka Client 탑재
 # Jenkinsfile 
 
+```
 stage('==========argocd deploy image========'){
 
   withCredentials([usernamePassword(credentialsId: "github",
@@ -18,3 +19,4 @@ stage('==========argocd deploy image========'){
         git add . && git commit -m '[Argo] Docker image tag: ${env.BUILD_NUMBER}' && \
         git push -u origin main
     """
+```
