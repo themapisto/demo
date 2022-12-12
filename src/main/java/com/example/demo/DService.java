@@ -18,7 +18,7 @@ public class DService {
         /** 람다스트림 표현 */
         discoveryClient.getServices().forEach(serviceName -> {
             discoveryClient.getInstances(serviceName).forEach(instance->{
-                services.add( String.format("%s:%s",serviceName,instance.getUri()));
+                services.add( String.format("client 서비스 정보들입니다. 현재 쿠버네티스 파드로 서비스 하고 있는 중입니다. %s:%s",serviceName,instance.getUri()));
             });
         });
         return services;

@@ -11,7 +11,7 @@ public class DController {
     @Autowired
     DService discoveryService;
 
-    @PostMapping(value = "/services")
+    @PostMapping(value = "/client")
     public List<String> services() {
         System.out.println("What the fuck");
         System.out.println(discoveryService.getServices());
