@@ -1,22 +1,15 @@
 # demo 어플리케이션
-# Spring Eureka Client 탑재
-# Jenkinsfile 
+- rest api ("/client")
+  - "client 서비스 정보들입니다. 현재 쿠버네티스 파드로 서비스 하고 있는 중입니다. %s:%s",serviceName,instance.getUri())"
+  -  Gateway와 연결되어 호출 가능
+# Spring Eureka 서버와의 연결
+- Eurkea server url : "eureka.taskoo.net"
+- service31 (name) url : "client.taskoo.net"
 
-```
-stage('==========argocd deploy image========'){
 
-  withCredentials([usernamePassword(credentialsId: "github",
-                                                  usernameVariable: 'SCM_USER',
-                                                  passwordVariable: 'SCM_PASSWORD')]) {
-    sh """
-        cat /var/lib/jenkins/workspace/springboot/k8s/client_deploy.yaml && \
-        git config --global user.name "themapisto"
-        git config --global user.email "themapisto@naver.com"
-        git remote -v
-        git config remote.origin.url 'https://themapisto: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@github.com/themapisto/demo.git'
-        git config --global credential.helper store
-        sed -i 's/1.123/${env.BUILD_NUMBER}/g' /var/lib/jenkins/workspace/springboot/k8s/client_deploy.yaml && \
-        git add . && git commit -m '[Argo] Docker image tag: ${env.BUILD_NUMBER}' && \
-        git push -u origin main
-    """
-```
+# Jenkins
+- jenkins.taskoo.net:8080
+- sudo ssh -i /home/ubuntu/koo-eks.pem ubuntu@3.128.254.203
+
+
+
