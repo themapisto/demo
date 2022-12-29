@@ -18,4 +18,13 @@ public class DController {
 
         return discoveryService.getServices();
     }
+
+    @GetMapping(value = "/services")
+    public List<String> services2() {
+        System.out.println("What the fuck");
+        System.out.println(discoveryService.getServices());
+
+        return discoveryService.getServices();
+    }
+
 }
