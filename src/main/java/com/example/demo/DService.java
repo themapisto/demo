@@ -23,5 +23,16 @@ public class DService {
         });
         return services;
     }
+    public List getServices2(){
+        List<String> services = new ArrayList<String>();
+
+        /** 람다스트림 표현 */
+        discoveryClient.getServices().forEach(serviceName -> {
+            discoveryClient.getInstances(serviceName).forEach(instance->{
+                services.add( String.format("client 서비스 2번째 메서드 호출입니다. %s:%s",serviceName,instance.getUri()));
+            });
+        });
+        return services;
+    }
 
 }
