@@ -19,9 +19,9 @@ public class DController {
         return discoveryService.getServices();
     }
 
-    @GetMapping(value = "/services")
+    @PostMapping(value = "/services")
     public List<String> services2() {
-        System.out.println("What the fuck");
+        System.out.println("localhost:8015로 부터 요청이 들어왔습니다!");
         System.out.println(discoveryService.getServices());
 
         return discoveryService.getServices();
