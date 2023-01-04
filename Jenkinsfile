@@ -17,7 +17,7 @@ node {
 
 stage ('SonarQube analysis'){
 
-sh "'${mvnHome}/bin/mvn' clean verify sonar:sonar -Dsonar.projectKey=Koo -Dsonar.host.url=http://54.238.193.86:5000 -Dsonar.login=squ_892cd416be91411e1e25b99cf8d1f37ff33af727"
+sh "'${mvnHome}/bin/mvn' clean verify sonar:sonar -Dsonar.projectKey=Koo -Dsonar.host.url=http://54.238.193.86:5000 -Dsonar.login=squ_469bf65b7f647fc65a6c095593643f2f7edab9a9"
 
 }
 
