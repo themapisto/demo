@@ -9,7 +9,7 @@
 - service31 (name) url : "client.taskoo.net"
 
 
-### Jenkins
+### Jenkins cicd 적용 
 - URL 접속 시 : jenkins.taskoo.net:8080
 - CLI 접속 시 : sudo ssh -i /home/ubuntu/koo-eks.pem ubuntu@3.128.254.203
 
