@@ -5,7 +5,7 @@ metadata:
   labels:
     app: springboot
   name: springboot
-  namespace: springboot1
+  namespace: springboot
 spec:
   ports:
   - port: 8012

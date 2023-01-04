@@ -2,10 +2,10 @@ apiVersion: projectcontour.io/v1
 kind: HTTPProxy
 metadata:
   name: springboot
-  namespace: springboot1
+  namespace: springboot
 spec:
   virtualhost:
-    fqdn: client2.taskoo.net
+    fqdn: client.taskoo.net
   routes:
     - services:
       - name: springboot
