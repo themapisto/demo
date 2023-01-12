@@ -3,113 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <title>WEEKLY PLANER</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <style>
-        @font-face {
-            font-family: 'GowunDodum-Regular';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        html, body{
-            font-family: 'GowunDodum-Regular';
-        }
-
-        .title{
-            font-size: 2em;
-            text-align: center;
-        }
-        table{
-            text-align: center;
-            width: 1050;
-        }
-        td{
-            height: 50px;
-            width: 150px;
-        }
-
-    </style>
-</head>
 <body>
-<div class = "container">
-    <div class = "title m-2 p-2"><b>WEEKLY PLANNER</b></div>
-    <div class="input-group flex-nowrap m-1 p-1">
-        <div class="input-group-prepend m-1">
-            <span class="input-group-text">숫자</span>
-        </div>
-        <input id = "day" type="text" class="form-control m-1" placeholder="요일에 해당하는 숫자를 입력하세요">
-        <div class="input-group-prepend m-1">
-            <span class="input-group-text">할일</span>
-        </div>
-        <input id ="toDo" type="text" class="form-control m-1" placeholder="할일을 입력하세요">
-        <button type="button" class ="btn btn-outline-dark m-1" onclick="schedule_insert()">입력</button>
-        <button type="button" class ="btn btn-outline-dark m-1" onclick="schedule_removeAll()">모두삭제</button>
-    </div>
-    <div id ="edit_" class="input-group flex-nowrap m-1 p-1 d-none">
-        <div class="input-group-prepend m-1">
-            <span class="input-group-text">변경사항</span>
-        </div>
-        <input id = "edit_list" type="text" class="form-control m-1" placeholder="변경사항을 입력하세요">
-        <button type="button" class ="btn btn-outline-dark m-1" onclick="schedule_edit()">변경</button>
-    </div>
+<style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0;}
+    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+        overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+        font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+    .tg .tg-yofg{background-color:#9aff99;text-align:left;vertical-align:top}
+    .tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
 
-    <div class ="list">
-        <table class ="table ttodo-list">
-            <thead>
-            <th>Monday(1)</th>
-            <th>Tuesday(2)</th>
-            <th>Wednesday(3)</th>
-            <th>Thursday(4)</th>
-            <th>Friday(5)</th>
-            <th class ="text-primary">Saturday(6)</th>
-            <th class ="text-danger">Sunday(7)</th>
-            </th>
-            <tr class="todo">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
-    </div>
-</div>
-<script>
-    var edittodo;
 
-    function schedule_insert(){
-        var num =$("#day").val()-1;
-        $($(".todo").children()[num]).append("<div class ='parent'><div class = 'to_do'>" + $("#toDo").val()+ "</div><div><button type='button' class ='btn btn-outline-dark btn-sm m-1' onclick='edit(this)'>수정</button><button type='button' class ='btn btn-outline-dark btn-sm m-1' onclick='schedule_remove(this)'>삭제</button></div></div>");
-    }
+<table class="tg">
+    <thead>
+    <tr>
+        <th class="tg-yofg"> 화요일</th>
+        <th class="tg-yofg">수요일</th>
+        <th class="tg-yofg">목요일</th>
+        <th class="tg-yofg">금요일</th>
+        <th class="tg-yofg">토요일</th>
+        <th class="tg-yofg">일요일</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>벤트오버 레터럴 레이즈 </td>
+        <td>인클라인 벤치프레스</td>
+        <td>랫풀다운</td>
+        <td>레그 익스텐션</td>
+        <td>인클라인 덤벨 프레스</td>
+        <td>레그 익스텐션</td>
+    </tr>
+    <tr>
+        <td>사레레 / 업라이트 로우 슈퍼세트</td>
+        <td>벤치프레스</td>
+        <td>시티드로우</td>
+        <td>레그 프레스</td>
+        <td>벤치프레스</td>
+        <td>레그 프레스</td>
+    </tr>
+    <tr>
+        <td>덤벨 프레스</td>
+        <td>머신 인클라인 벤치프레스</td>
+        <td>바벨로우</td>
+        <td>스쿼트</td>
+        <td>바벨로우 </td>
+        <td>스쿼트</td>
+    </tr>
+    <tr>
+        <td>스미스머신 바벨 밀리터리 프레스</td>
+        <td>원암 풀다운 </td>
+        <td>푸시다운 / 풀업 슈퍼세트</td>
+        <td>핵 스쿼트</td>
+        <td>랫풀다운</td>
+        <td>스티프 데드리프트</td>
+    </tr>
+    <tr>
+        <td>푸시다운 삼두</td>
+        <td>스미스머신 바벨로우</td>
+        <td>해머컬</td>
+        <td>힙 스러스트</td>
+        <td>스미스 머신 밀리터리 프레스</td>
+        <td>힙 어브덕션</td>
+    </tr>
+    <tr>
+        <td>바벨컬</td>
+        <td>푸시다운 삼두</td>
+        <td>바벨컬</td>
+        <td>풀업</td>
+        <td>리어 델트 </td>
+        <td>행잉 레그레이즈</td>
+    </tr>
+    </tbody>
+</table>
 
-    function schedule_removeAll(){
-        $(".to_do").parent().remove();
-    }
-
-    function edit(ths){
-        if( $("#edit_").hasClass("d-none")){
-            $("#edit_").removeClass("d-none");
-            edittodo = ths;
-            $('#edit_list').val($($($(edittodo).parent()).parent('.parent')).children('.to_do').text());
-        }
-        else{
-            $("#edit_").addClass("d-none");
-        }
-    }
-
-    function schedule_edit(){
-        $($($(edittodo).parent()).parent('.parent')).children('.to_do').text($('#edit_list').val());
-        $("#edit_").addClass("d-none");
-    }
-
-    function schedule_remove(ths){
-        $($(ths).parent()).parent().remove();
-    }
-</script>
 </body>
 </html>
