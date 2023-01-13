@@ -13,6 +13,8 @@ spring:
   h2:
     console:
       enabled: true # H2 DB 웹콘솔 사용하도록 설정 (http://localhost:8080/h2-console)
+      settings:
+        web-allow-others: true
   jpa:
     database: H2
     show-sql: true # Jpa 수행 시 SQL문 로그 출력
