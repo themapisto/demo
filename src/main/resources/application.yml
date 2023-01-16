@@ -4,7 +4,6 @@ server:
 spring:
   application:
     name: service31
-
   datasource: # H2 DB 설정
     url: jdbc:h2:mem:JPATest2
     username: sa
@@ -21,7 +20,14 @@ spring:
     properties:
       hibernate:
         format_sql: true # 쿼리 출력시 포맷 정렬되도록 설정
+  thymeleaf:
+    prefix : classpath:templates/
+    suffix : .html
 
+
+
+
+## Eureka Server 설정
 eureka:
   instance:
     prefer-ip-address: true
