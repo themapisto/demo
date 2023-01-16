@@ -21,7 +21,7 @@
     <thead>
         <tbody th:each="member: ${list}">
         <tr class="todo">
-            <td class="tg-pi2l">요일</td>
+            <td class="tg-pi2l" th:text="${member.id}">Day</td>
             <td th:text="${member.exercise1}"></td>
             <td th:text="${member.exercise2}"></td>
             <td th:text="${member.exercise3}"></td>
