@@ -17,9 +17,11 @@ public class TController {
     @GetMapping("/hello-mvc")
     public String hello(Model model){
 
+        System.out.println(tService.MemberList(1L));
         model.addAttribute("data","Hello this is koo blog");
         model.addAttribute("list",tService.MemberList(1L));
 
-        return "index";
+
+        return "hellow";
     }
 }

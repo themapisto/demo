@@ -19,65 +19,17 @@
 
 
 <table class="tg">
-    <thead>
-    <tr>
-        <th class="tg-yofg">화요일</th>
-        <th class="tg-yofg">수요일</th>
-        <th class="tg-yofg">목요일</th>
-        <th class="tg-yofg">금요일</th>
-        <th class="tg-yofg">토요일</th>
-        <th class="tg-yofg">일요일</th>
-    </tr>
-    </thead>
+
     <tbody th:each="member: ${list}">
     <tr class="todo" >
         <td th:text="${member.exercise1}"></td>
-        <td> incline dumbell press</td>
-        <td> Lat pull down</td>
-        <td> Leg Extension</td>
-        <td> incline dumbell press</td>
-        <td> Leg Extension</td>
-    </tr>
-    <tr>
         <td th:text="${member.exercise2}"></td>
-        <td>벤치프레스</td>
-        <td>시티드로우</td>
-        <td>레그 프레스</td>
-        <td>벤치프레스</td>
-        <td>레그 프레스</td>
-    </tr>
-    <tr>
         <td th:text="${member.exercise3}"></td>
-        <td>머신 인클라인 벤치프레스</td>
-        <td>바벨로우</td>
-        <td>스쿼트</td>
-        <td>바벨로우 </td>
-        <td>스쿼트</td>
-    </tr>
-    <tr>
         <td th:text="${member.exercise4}"></td>
-        <td>원암 풀다운 </td>
-        <td>푸시다운 / 풀업 슈퍼세트</td>
-        <td>핵 스쿼트</td>
-        <td>랫풀다운</td>
-        <td>스티프 데드리프트</td>
-    </tr>
-    <tr>
         <td th:text="${member.exercise5}"></td>
-        <td>스미스머신 바벨로우</td>
-        <td>해머컬</td>
-        <td>힙 스러스트</td>
-        <td>스미스 머신 밀리터리 프레스</td>
-        <td>힙 어브덕션</td>
-    </tr>
-    <tr>
         <td th:text="${member.exercise6}"></td>
-        <td>푸시다운 삼두</td>
-        <td>바벨컬</td>
-        <td>풀업</td>
-        <td>리어 델트 </td>
-        <td>행잉 레그레이즈</td>
     </tr>
+
     </tbody>
 </table>
 

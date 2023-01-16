@@ -15,13 +15,13 @@ public class TService {
     private MemberRepository memberRepository;
 
 
-    public Member MemberList(@RequestParam Long id) {
+    public List<Member> MemberList(@RequestParam Long id) {
         System.out.println("Service 호출!!");
         Optional<Member> member = memberRepository.findById(id);
 
         List<Member> allist = memberRepository.findAll();
 
-        return member.get();
+        return allist;
 
     }
 }
