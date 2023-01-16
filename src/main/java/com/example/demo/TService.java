@@ -5,6 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -16,7 +17,11 @@ public class TService {
 
     public Member MemberList(@RequestParam Long id) {
         System.out.println("Service 호출!!");
-        Optional<Member> member =memberRepository.findById(id);
+        Optional<Member> member = memberRepository.findById(id);
+
+        List<Member> allist = memberRepository.findAll();
+
         return member.get();
+
     }
 }
