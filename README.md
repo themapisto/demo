@@ -70,4 +70,32 @@
 "exercise6": "Leg raise",
 "meberDesc": 20,
 "age": 30
+}  
+
+
+{
+"id": 5,
+"username": "KOO",
+"exercise1": "bent over lateral raise",
+"exercise2": "side lateral raise",
+"exercise3": "dumbell press",
+"exercise4": "smith machine babel press",
+"exercise5": "push down triceps",
+"exercise6": "babel curl",
+"meberDesc": 20,
+"age": 30
 }
+
+{
+"id": 6,
+"username": "KOO",
+"exercise1": "incline dumbell press",
+"exercise2": "bench press",
+"exercise3": "machine incline bench press",
+"exercise4": "One arm pull down",
+"exercise5": "smith machine babell row",
+"exercise6": "push down",
+"meberDesc": 20,
+"age": 30
+}
+

@@ -1,37 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>WEEKLY PLANER</title>
-<body>
+
+
+
+
+
+
 <style type="text/css">
     .tg  {border-collapse:collapse;border-spacing:0;}
     .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
         overflow:hidden;padding:10px 5px;word-break:normal;}
     .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
         font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-    .tg .tg-yofg{background-color:#9aff99;text-align:left;vertical-align:top}
+    .tg .tg-pi2l{background-color:#9aff99;border-color:inherit;color:#ffffff;text-align:left;vertical-align:top}
     .tg .tg-0lax{text-align:left;vertical-align:top}
-    h1{text-align:center;}
+    .tg .tg-rcag{background-color:#9aff99;color:#ffffff;text-align:left;vertical-align:top}
 </style>
 
-<h1> 한승이 운동 일정표 !! </h1>
+    <h1> 한승이 운동 일정표 !! </h1>
 
-
-<table class="tg">
-
-    <tbody th:each="member: ${list}">
-    <tr class="todo" >
-        <td th:text="${member.exercise1}"></td>
-        <td th:text="${member.exercise2}"></td>
-        <td th:text="${member.exercise3}"></td>
-        <td th:text="${member.exercise4}"></td>
-        <td th:text="${member.exercise5}"></td>
-        <td th:text="${member.exercise6}"></td>
-    </tr>
-
+    <table class="tg">
+    <thead>
+        <tbody th:each="member: ${list}">
+        <tr class="todo">
+            <td class="tg-pi2l">요일</td>
+            <td th:text="${member.exercise1}"></td>
+            <td th:text="${member.exercise2}"></td>
+            <td th:text="${member.exercise3}"></td>
+            <td th:text="${member.exercise4}"></td>
+            <td th:text="${member.exercise5}"></td>
+            <td th:text="${member.exercise6}"></td>
+        </tr>
     </tbody>
-</table>
+    </thead>
 
-</body>
-</html>
+
+</table>

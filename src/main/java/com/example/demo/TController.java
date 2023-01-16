@@ -22,6 +22,6 @@ public class TController {
         model.addAttribute("list",tService.MemberList(1L));
 
 
-        return "hellow";
+        return "index";
     }
 }
