@@ -15,7 +15,6 @@ public class MemberController {
 
     @PostMapping("/join")
     public String join(@RequestBody Member member){
-
     Member newmember = memberRepository.save(member);
         return member.getUsername();
     }

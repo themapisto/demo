@@ -16,7 +16,7 @@ spring:
         web-allow-others: true
   jpa:
     database: H2
-    show-sql: true # Jpa 수행 시 SQL문 로그 출력
+    show-sql: false # Jpa 수행 시 SQL문 로그 출력
     properties:
       hibernate:
         format_sql: true # 쿼리 출력시 포맷 정렬되도록 설정

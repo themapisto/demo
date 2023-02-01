@@ -1,5 +1,5 @@
 
-
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
 
 
@@ -32,5 +32,55 @@
     </tbody>
     </thead>
 
+        <form name="testForm" id="testForm">
+            <input type="text" name="id" id="id" value="112" />
+            <button id="btn1">제출</button>
+        </form>
+
 
 </table>
+
+
+
+<script>
+    $("#btn1").click(function javascript_onclikc(){
+        alert('Jquery button를 클릭하셨습니다.');
+
+
+        $.ajax({
+            url: "http://localhost:8012/index/join",
+            type: "POST",
+            data : JSON.stringify(
+
+
+                {
+                    "id": 100,
+                    "username": "KOO",
+                    "exercise1": "lat pull down",
+                    "exercise2": "seated row",
+                    "exercise3": "babel row",
+                    "exercise4": "push down lat",
+                    "exercise5": "hammer curl" ,
+                    "exercise6": "babel curl",
+                    "meberDesc": 20,
+                    "age": 30
+                }
+
+
+            ),
+            dataType: 'json',
+            headers: {'Content-Type': 'application/json'},
+            success: function (response) {
+                console.log(response);
+            },
+            error: function(error){
+                console.log("Something went wrong", error);
+            }
+        });
+
+
+
+
+    });
+
+</script>

@@ -31,6 +31,5 @@ insert
         (default, 30, 'bent over lateral raise', 'side lateral raise', 'machine shoulder press', 'dumbell shoulder press', 'smith machine babel press', 'rear delt machine', 20, 'KOO'),
         (default, 30, 'incline dumbell press', 'bench press', 'machine incline bench press', 'one arm pull down', 'smith machine babel row', 'push down', 20, 'KOO'),
         (default, 30, 'seated row', 'Cable push down ', 'babel row', 'Lat pull down', 'one arm pull down', 'babel curl', 20, 'KOO'),
-        (default, 30, 'Leg extension', 'Leg press', 'Squat', 'Squat Machine', 'Leg raise', 'Heap thrust', 20, 'KOO')
-            
+        (default, 30, 'Leg extension', 'Leg press', 'Squat', 'Squat Machine', 'Leg raise', 'Heap thrust', 20, 'KOO')            
 ```

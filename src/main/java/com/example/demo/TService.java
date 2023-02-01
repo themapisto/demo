@@ -16,9 +16,8 @@ public class TService {
 
 
     public List<Member> MemberList(@RequestParam Long id) {
-        System.out.println("Service 호출!!");
-        Optional<Member> member = memberRepository.findById(id);
 
+        Optional<Member> member = memberRepository.findById(id);
         List<Member> allist = memberRepository.findAll();
 
         return allist;
