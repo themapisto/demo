@@ -3,6 +3,7 @@ package com.example.demo;
 import com.netflix.discovery.converters.Auto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
@@ -14,7 +15,8 @@ public class MemberController {
     MemberRepository memberRepository;
 
     @PostMapping("/join")
-    public String join(@RequestBody Member member){
+    public String join(Member member, BindingResult result){
+
     Member newmember = memberRepository.save(member);
         return member.getUsername();
     }
