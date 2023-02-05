@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <link th:href="@{/css/bootstrap.min.css}"
+        href="../css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .container {
+      max-width: 560px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="py-5 text-center">
+    <h2>add 폼</h2>
+  </div>
+
+  <form action="index.html" th:action th:object="${member}" method="post">
+    <div>
+      <label for="id">id</label>
+      <input type="text" id="id" th:field="*{id}" class="form-control" placeholder="이름을 입력하세요">
+    </div>
+    <div>
+      <label for="username">username</label>
+      <input type="text" id="username" th:field="*{username}" class="form-control" placeholder="가격을 입력하세요">
+    </div>
+    <div>
+      <label for="exercise1">exercise1</label>
+      <input type="text" id="exercise1" th:field="*{exercise1}" class="form-control" placeholder="ex1 입력하세요">
+    </div>
+    <div>
+      <label for="exercise2">exercise2</label>
+      <input type="text" id="exercise2" th:field="*{exercise2}" class="form-control" placeholder="ex1 입력하세요">
+    </div>
+    <div>
+      <label for="exercise3">exercise3</label>
+      <input type="text" id="exercise3" th:field="*{exercise3}" class="form-control" placeholder="ex1 입력하세요">
+    </div>
+    <div>
+      <label for="exercise4">exercise4</label>
+      <input type="text" id="exercise4" th:field="*{exercise4}" class="form-control" placeholder="ex1 입력하세요">
+    </div>
+    <div>
+    <label for="exercise5">exercise5</label>
+    <input type="text" id="exercise5" th:field="*{exercise5}" class="form-control" placeholder="ex1 입력하세요">
+    </div>
+    <div>
+    <label for="exercise6">exercise6</label>
+    <input type="text" id="exercise6" th:field="*{exercise6}" class="form-control" placeholder="ex1 입력하세요">
+    </div>
+
+    <div>
+      <label for="meberDesc">meberDesc</label>
+      <input type="text" id="meberDesc" th:field="*{meberDesc}" class="form-control" placeholder="ex1 입력하세요">
+    </div>
+
+
+    <div>
+      <label for="age">age</label>
+      <input type="text" id="age" th:field="*{age}" class="form-control" placeholder="ex1 입력하세요">
+    </div>
+
+
+
+
+    <div class="row">
+      <div class="col">
+        <button class="w-100 btn btn-primary btn-lg" type="submit">상품 등록</button>
+      </div>
+      <div class="col">
+
+
+
+        <button class="w-100 btn btn-secondary btn-lg"
+                onclick="location.href='items.html'"
+                th:onclick="|location.href='@{/hello-mvc}'|"
+                type="button">취소</button>
+      </div>
+    </div>
+
+  </form>
+
+</div> <!-- /container -->
+</body>
+</html>
