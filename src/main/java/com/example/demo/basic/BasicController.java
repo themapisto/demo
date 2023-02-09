@@ -1,6 +1,7 @@
 package com.example.demo.basic;
 
 import lombok.Data;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -93,13 +94,19 @@ public class BasicController {
 
     @GetMapping("/each")
     public String each(Model model){
-            addUsers(model);
+
+        model.addAttribute("user",new User("UserA", 10));
+        addUsers(model);
+
         return "basic/each";
     }
 
 
     @GetMapping("/javascript")
     public String javascript(Model model){
+
+
+        model.addAttribute("user",new User("UserA", 10));
         addUsers(model);
         return "basic/javascript";
     }
@@ -112,7 +119,7 @@ public class BasicController {
 
 
 
-    private void addUsers(Model model){
+    private void addUsers(@NotNull Model model){
         List<User> list= new ArrayList<>();
         list.add(new User("userA", 10));
         list.add(new User("userB", 20));
