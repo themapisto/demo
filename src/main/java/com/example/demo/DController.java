@@ -13,17 +13,11 @@ public class DController {
 
     @GetMapping(value = "/client")
     public List<String> services() {
-        System.out.println("GetMapping /client 호출");
-        System.out.println(discoveryService.getServices());
-
         return discoveryService.getServices();
     }
 
     @PostMapping(value = "/services")
     public List<String> services2() {
-        System.out.println("localhost:8015로 부터 요청이 들어왔습니다!");
-        System.out.println(discoveryService.getServices());
-
         return discoveryService.getServices();
     }
 

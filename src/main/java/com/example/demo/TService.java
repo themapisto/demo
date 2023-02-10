@@ -1,7 +1,6 @@
 package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -17,10 +16,16 @@ public class TService {
 
     public List<Member> MemberList(@RequestParam Long id) {
 
-        Optional<Member> member = memberRepository.findById(id);
+
         List<Member> allist = memberRepository.findAll();
 
         return allist;
 
     }
+
+    public Optional<Member> MemberGet(@RequestParam Long id){
+        Optional<Member> member = memberRepository.findById(id);
+        return member;
+    }
+
 }
