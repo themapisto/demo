@@ -30,7 +30,7 @@ public class TController {
     @GetMapping("/{memberId}")
     public String member(@PathVariable long memberId, Model model){
 
-        Optional<Member> member=tService.MemberGet(1L);
+        Optional<Member> member=tService.MemberGet(memberId);
         System.out.println(member.toString());
 
         Member memberEntity = member.orElse(null);
