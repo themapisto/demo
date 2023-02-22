@@ -19,6 +19,7 @@ public class DController {
     @GetMapping (value = "/services")
     public String services2() {
         String string= "gateway - service1 - demo 호출";
+        System.out.println("gatway -service1 - demo 호출");
         return string;
     }
 
