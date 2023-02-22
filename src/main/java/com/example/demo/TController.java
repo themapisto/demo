@@ -24,6 +24,7 @@ public class TController {
     public String hello(Model model){
         model.addAttribute("data","Hello this is koo blog");
         model.addAttribute("list",tService.MemberList(1L));
+        System.out.println(tService.MemberList((1L)).toString());
         return "form/exercises";
     }
 
