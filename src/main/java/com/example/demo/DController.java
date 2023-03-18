@@ -1,7 +1,7 @@
 package com.example.demo;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -16,9 +16,11 @@ public class DController {
         return discoveryService.getServices();
     }
 
-    @PostMapping(value = "/services")
-    public List<String> services2() {
-        return discoveryService.getServices();
+    @GetMapping (value = "/services")
+    public String services2() {
+        String string= "gateway - service1 - demo 호출";
+        System.out.println("gatway -service1 - demo 호출");
+        return string;
     }
 
 }
