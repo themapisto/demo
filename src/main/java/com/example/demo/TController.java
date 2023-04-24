@@ -51,8 +51,6 @@ public class TController {
     @PostMapping("/add")
     public String addItem(@ModelAttribute Member member, RedirectAttributes redirectAttributes) {
 
-        System.out.println(member.getId());
-        System.out.println(member.getUsername());
 
         Member savedMember = memberRepository.save(member);
         redirectAttributes.addAttribute("id", savedMember.getId());
